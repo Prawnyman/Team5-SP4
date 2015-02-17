@@ -26,13 +26,13 @@ public class BombScript : MonoBehaviour
 		spawnPrev = now;
 
 		for (int i=0; i<spawnCount; i++) {
-			float x = Random.Range (-10, 0);
+			float x = Random.Range (-10, -1);
 			float y = 5;
 
 			Instantiate (spawnType, new Vector3 (x, y, 0), Quaternion.identity);
 
 	
-			x = Random.Range (1, 10);
+			x = Random.Range (0, 10);
 			y = 6;
 				
 			Instantiate (spawnType, new Vector3 (x, y, 0), Quaternion.identity);
