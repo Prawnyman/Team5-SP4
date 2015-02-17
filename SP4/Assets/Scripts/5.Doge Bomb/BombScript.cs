@@ -1,21 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-public class BombScript : MonoBehaviour {
+public class BombScript : MonoBehaviour
+{
 	public GameObject spawnType;
 	public int spawnCount;
 	public float spawnDelay;
 	private float spawnPrev;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		spawnPrev = Time.time;
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
+
 		float now = Time.time;
-		float diff = (now - spawnPrev)*1000;
+		float diff = (now - spawnPrev) * 1000;
 
 		if (diff < spawnDelay) {
 			return;
@@ -23,19 +26,22 @@ public class BombScript : MonoBehaviour {
 		spawnPrev = now;
 
 		for (int i=0; i<spawnCount; i++) {
-			float x = Random.Range(-10,0);
+			float x = Random.Range (-10, 0);
 			float y = 5;
 
-			Instantiate(spawnType,new Vector3(x,y,0),Quaternion.identity);
+			Instantiate (spawnType, new Vector3 (x, y, 0), Quaternion.identity);
 
 	
-				 x = Random.Range(1,10);
-				y = 6;
+			x = Random.Range (1, 10);
+			y = 6;
 				
-				Instantiate(spawnType,new Vector3(x,y,0),Quaternion.identity);
+			Instantiate (spawnType, new Vector3 (x, y, 0), Quaternion.identity);
 
 		}
 
+	} 
+	
 
-	}
+	
 }
+	
