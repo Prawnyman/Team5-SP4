@@ -5,6 +5,8 @@ TagManager:
   tags:
   - Ground
   - Plane
+  - Character
+  - WW2Guard
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
