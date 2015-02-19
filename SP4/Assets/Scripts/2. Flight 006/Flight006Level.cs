@@ -15,18 +15,21 @@ public class Flight006Level : MonoBehaviour {
 	void Update () {
 		GameObject checkPlane = GameObject.FindGameObjectWithTag("Plane");
 
-		if(checkPlane.GetComponent<PlaneScript>().getTouchedGround()){
-			//Plane crashes
-			if(checkPlane.GetComponent<PlaneScript>().getRotation() < -5.0f ||
-			   checkPlane.GetComponent<PlaneScript>().getRotation() > 5.0f){
-				//Lose
-				GameObject obj = Instantiate(explosion, checkPlane.transform.position, Quaternion.identity) as GameObject;
-				obj.tag = "";
-				checkPlane.GetComponent<PlaneScript>().destroyPlane();
-			}
-			//Plane lands safely
-			else{
-				//Win
+		if(checkPlane != null){
+			if(checkPlane.GetComponent<PlaneScript>().getTouchedGround()){
+				//Plane crashes
+				if(checkPlane.GetComponent<PlaneScript>().getRotation() < -7.5f ||
+				   checkPlane.GetComponent<PlaneScript>().getRotation() > 7.5f){
+					//Lose
+					GameObject obj = Instantiate(explosion, checkPlane.transform.position, Quaternion.identity) as GameObject;
+					obj.tag = "";
+					DestroyObject(checkPlane);
+				}
+				//Plane lands safely
+				else{
+					//Win
+					checkPlane.GetComponent<PlaneScript>().landPlane();
+				}
 			}
 		}
 	}
