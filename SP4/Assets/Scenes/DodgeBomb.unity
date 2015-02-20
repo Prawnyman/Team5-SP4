@@ -500,7 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BombSpawner: {fileID: 126738, guid: dd6cb807269c4304eae8e03a2a280408, type: 2}
-  Player: {fileID: 158942, guid: e977ec91a13b47548a50d9fbd83bc597, type: 2}
+  Player: {fileID: 117142, guid: 173aeb38084ee6a41aaf7875f4b8fbe7, type: 2}
 --- !u!1 &1723049450
 GameObject:
   m_ObjectHideFlags: 0
