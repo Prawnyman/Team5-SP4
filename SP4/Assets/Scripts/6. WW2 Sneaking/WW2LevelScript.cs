@@ -13,6 +13,11 @@ public class WW2LevelScript : MonoBehaviour {
 		newCharacter.tag = "Character";
 
 		//Create guards
+		GameObject newGuard = Instantiate(guard, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+		newGuard.GetComponent<WW2GuardScript>().setDir(0, 1);
+
+		newGuard = Instantiate(guard, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+		newGuard.GetComponent<WW2GuardScript>().setDir(0, -1);
 	}
 	
 	// Update is called once per frame
