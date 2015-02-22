@@ -68,16 +68,18 @@ public class PlaneScript : MonoBehaviour {
 	}
 
 	void updateInitialRotation(){
-		if(Mathf.Abs(initialRotation - newInitialRotation) <= 0.75f){
-			initialRotation = newInitialRotation;
-			newInitialRotation = Random.Range(-35, 35);
-		}
-
-		if(newInitialRotation - initialRotation > 0){
-			initialRotation += 20.0f * Time.deltaTime;
-		}
-		else if(newInitialRotation - initialRotation < 0){
-			initialRotation -= 20.0f * Time.deltaTime;
+		if(this.transform.position.y > -1.5f){
+			if(Mathf.Abs(initialRotation - newInitialRotation) <= 0.75f){
+				initialRotation = newInitialRotation;
+				newInitialRotation = Random.Range(-35, 35);
+			}
+			
+			if(newInitialRotation - initialRotation > 0){
+				initialRotation += 20.0f * Time.deltaTime;
+			}
+			else if(newInitialRotation - initialRotation < 0){
+				initialRotation -= 20.0f * Time.deltaTime;
+			}
 		}
 	}
 
