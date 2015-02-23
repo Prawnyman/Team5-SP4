@@ -5,6 +5,8 @@ public class RubbleLevel : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+//		GameObject obj = Instantiate() as GameObject;
+//		obj.transform.position.Set(0, 0, 0);
 	
 	}
 	
