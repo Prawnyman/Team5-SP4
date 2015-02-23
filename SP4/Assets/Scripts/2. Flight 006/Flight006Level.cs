@@ -24,13 +24,23 @@ public class Flight006Level : MonoBehaviour {
 					GameObject obj = Instantiate(explosion, checkPlane.transform.position, Quaternion.identity) as GameObject;
 					obj.tag = "";
 					DestroyObject(checkPlane);
+					Lose();
 				}
 				//Plane lands safely
 				else{
 					//Win
 					checkPlane.GetComponent<PlaneScript>().landPlane();
+					Win();
 				}
 			}
 		}
+	}
+
+
+	void Win(){
+
+	}
+	void Lose(){
+
 	}
 }
