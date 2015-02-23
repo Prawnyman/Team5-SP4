@@ -7,36 +7,36 @@ public class TouchControl : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		this.GetComponent<ParticleEmitter>().emit = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	if(Input.touches.Length > 0)
-	{
-		if(Input.touchCount == 1)
+		if(Input.touches.Length > 0)
 		{
-			Touch touch = Input.GetTouch(0);
+			if(Input.touchCount == 1)
+			{
+				Touch touch = Input.GetTouch(0);
 			
-			if(touch.phase == TouchPhase.Began){
-				fp = touch.position;
-				lp = touch.position;
+				if(touch.phase == TouchPhase.Began){
+					fp = touch.position;
+					lp = touch.position;
+					this.GetComponent<ParticleEmitter>().emit = true;
+				}
+				if(touch.phase == TouchPhase.Moved){
+					lp = touch.position;
+				
+					float yChange = lp.y - fp.y;
+					transform.Rotate(new Vector3(0, 0, 1), yChange * 10 * Time.deltaTime);
+				
+					fp = touch.position;
+				}
+				
+				if(touch.phase == TouchPhase.Ended)
+				{
+					this.GetComponent<ParticleEmitter>().emit = false;
+				}
 			}
-			if(touch.phase == TouchPhase.Moved){
-				lp = touch.position;
-				
-				float yChange = lp.y - fp.y;
-				transform.Rotate(new Vector3(0, 0, 1), yChange * 10 * Time.deltaTime);
-				
-				fp = touch.position;
-			}
-			
-//			Vector3 touchPos = new Vector3(touch.position.x, touch.position.y, 0);
-//			touchPos.z = Mathf.Abs(Camera.main.transform.position.y - transform.position.y);
-//			touchPos = Camera.main.ScreenToWorldPoint(touchPos);
-//			transform.LookAt(touchPos);
-			
-		}
-	}
-				
+		}			
 	}
 }
