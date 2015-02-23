@@ -212,7 +212,57 @@ Prefab:
     - target: {fileID: 21221174, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 696c5d79368016740bf752f20addb860,
+      objectReference: {fileID: 21300000, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite1
+      value: 
+      objectReference: {fileID: 21300000, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite2
+      value: 
+      objectReference: {fileID: 21300002, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite3
+      value: 
+      objectReference: {fileID: 21300004, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite4
+      value: 
+      objectReference: {fileID: 21300010, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite5
+      value: 
+      objectReference: {fileID: 21300008, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite6
+      value: 
+      objectReference: {fileID: 21300006, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite7
+      value: 
+      objectReference: {fileID: 21300012, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite8
+      value: 
+      objectReference: {fileID: 21300014, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite9
+      value: 
+      objectReference: {fileID: 21300016, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
+        type: 3}
+    - target: {fileID: 11404332, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
+      propertyPath: sprite10
+      value: 
+      objectReference: {fileID: 21300018, guid: 1890da2fa9a0fe748a248c86e6d51c6f,
         type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
@@ -250,16 +300,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69da293afdac73e448bd24189f6a2b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite1: {fileID: 21300000, guid: 696c5d79368016740bf752f20addb860, type: 3}
-  sprite2: {fileID: 21300002, guid: 696c5d79368016740bf752f20addb860, type: 3}
-  sprite3: {fileID: 21300004, guid: 696c5d79368016740bf752f20addb860, type: 3}
-  sprite4: {fileID: 21300006, guid: 696c5d79368016740bf752f20addb860, type: 3}
-  sprite5: {fileID: 21300008, guid: 696c5d79368016740bf752f20addb860, type: 3}
-  sprite6: {fileID: 21300010, guid: 696c5d79368016740bf752f20addb860, type: 3}
-  sprite7: {fileID: 21300012, guid: 696c5d79368016740bf752f20addb860, type: 3}
-  sprite8: {fileID: 21300014, guid: 696c5d79368016740bf752f20addb860, type: 3}
-  sprite9: {fileID: 21300016, guid: 696c5d79368016740bf752f20addb860, type: 3}
-  sprite10: {fileID: 21300018, guid: 696c5d79368016740bf752f20addb860, type: 3}
+  sprite1: {fileID: 21300000, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
+  sprite2: {fileID: 21300002, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
+  sprite3: {fileID: 21300004, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
+  sprite4: {fileID: 21300010, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
+  sprite5: {fileID: 21300008, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
+  sprite6: {fileID: 21300006, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
+  sprite7: {fileID: 21300012, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
+  sprite8: {fileID: 21300014, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
+  sprite9: {fileID: 21300016, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
+  sprite10: {fileID: 21300018, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
 --- !u!212 &936558695
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -281,7 +331,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 696c5d79368016740bf752f20addb860, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1890da2fa9a0fe748a248c86e6d51c6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &936558696
 Transform:
