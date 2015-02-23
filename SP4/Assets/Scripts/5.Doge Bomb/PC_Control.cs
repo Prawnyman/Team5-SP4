@@ -4,7 +4,6 @@ using System.Collections;
 public class PC_Control : MonoBehaviour {
 	Vector3 dir = Vector3.zero;
 	float moveSpeed = 0.5f;
-	float tempx = 0;
 	// Use this for initialization
 	void Start () {
 	
