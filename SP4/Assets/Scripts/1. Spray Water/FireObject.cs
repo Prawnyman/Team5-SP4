@@ -14,6 +14,7 @@ public class FireObject : MonoBehaviour {
 		if(hp <= 0)
 		{
 			this.transform.localScale -= new Vector3(1.0F, 1.0F, 0);
+			LevelInit.noFireObj -= 1;
 		}
 		if(this.transform.localScale.x < 0.0f && this.transform.localScale.y < 0.0f)
 		{
