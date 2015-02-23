@@ -4,12 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Flight 006.unity
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Scenes/1.Spray Water.unity
-=======
-    path: Assets/Scenes/DodgeBomb.unity
->>>>>>> origin/master
+  m_Scenes: []
