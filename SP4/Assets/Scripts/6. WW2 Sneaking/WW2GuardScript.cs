@@ -14,13 +14,16 @@ public class WW2GuardScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float magnitude = speed * Time.deltaTime;
-
-		this.transform.Translate(new Vector2(0, 1) * magnitude);
+		GameObject theCharacter = GameObject.FindGameObjectWithTag("Character");
 
 		if((this.transform.position - new Vector3(oldPos.x, oldPos.y)).magnitude >= 8.0f){
 			oldPos = this.transform.position;
 			this.transform.Rotate(0, 0, 180);
+			dir = -dir;
 		}
+
+		//Move forward towards where its facing
+		this.transform.Translate(new Vector2(0, 1) * magnitude);
 	}
 
 	public void setDir(float x, float y){

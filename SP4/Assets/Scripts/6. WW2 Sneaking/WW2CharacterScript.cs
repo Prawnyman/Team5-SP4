@@ -35,15 +35,16 @@ public class WW2CharacterScript : MonoBehaviour {
 			dir.Set(0, 0);
 		}
 #endif
-		this.transform.Translate(dir * Time.deltaTime * 5);
+		if(!caughtByGuards && !reachedEndpoint)
+			this.transform.Translate(dir * Time.deltaTime * 5);
 	}
 
-	void OnCollisionEnter2D(Collider2D col){
-		if(col.tag == "WW2 Endpoint"){
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.tag == "WW2 Endpoint"){
 			reachedEndpoint = true;
 		}
-		else if(col.tag == "WW2 Guard"){
-
+		else if(col.gameObject.tag == "WW2 Guard" || col.gameObject.tag == "WW2 Guard_vision"){
+			caughtByGuards = true;
 		}
 	}
 
@@ -51,7 +52,6 @@ public class WW2CharacterScript : MonoBehaviour {
 	public bool getReachedEndpoint(){
 		return reachedEndpoint;
 	}
-
 	public bool getCaughtByGuards(){
 		return caughtByGuards;
 	}
