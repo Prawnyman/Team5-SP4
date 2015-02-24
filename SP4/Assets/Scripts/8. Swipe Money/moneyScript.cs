@@ -14,7 +14,7 @@ public class moneyScript : MonoBehaviour {
 	void Update () {
 		if(hasMoved == true)
 		{	
-			transform.position += new Vector3(10 * Time.deltaTime, 0, 0);
+			transform.position += new Vector3(50 * Time.deltaTime, 0, 0);
 		}
 	}
 }
