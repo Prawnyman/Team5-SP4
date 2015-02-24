@@ -3,6 +3,8 @@ using System.Collections;
 
 public class WW2CharacterScript : MonoBehaviour {
 	Vector2 dir = new Vector2(0, 0);
+	bool reachedEndpoint = false;
+	bool caughtByGuards = false;
 
 	// Use this for initialization
 	void Start () {
@@ -34,5 +36,23 @@ public class WW2CharacterScript : MonoBehaviour {
 		}
 #endif
 		this.transform.Translate(dir * Time.deltaTime * 5);
+	}
+
+	void OnCollisionEnter2D(Collider2D col){
+		if(col.tag == "WW2 Endpoint"){
+			reachedEndpoint = true;
+		}
+		else if(col.tag == "WW2 Guard"){
+
+		}
+	}
+
+
+	public bool getReachedEndpoint(){
+		return reachedEndpoint;
+	}
+
+	public bool getCaughtByGuards(){
+		return caughtByGuards;
 	}
 }
