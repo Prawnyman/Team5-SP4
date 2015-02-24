@@ -1,17 +1,18 @@
 fileFormatVersion: 2
-guid: 1890da2fa9a0fe748a248c86e6d51c6f
+guid: 6b865df33825a2d45b16327296612690
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BreakTexture_0
-    21300002: BreakTexture_1
-    21300004: BreakTexture_2
-    21300006: BreakTexture_3
-    21300008: BreakTexture_4
-    21300010: BreakTexture_5
-    21300012: BreakTexture_6
-    21300014: BreakTexture_7
-    21300016: BreakTexture_8
-    21300018: BreakTexture_9
+    21300000: CrackTexture_0
+    21300002: CrackTexture_1
+    21300004: CrackTexture_2
+    21300006: CrackTexture_3
+    21300008: CrackTexture_4
+    21300010: CrackTexture_5
+    21300012: CrackTexture_6
+    21300014: CrackTexture_7
+    21300016: CrackTexture_8
+    21300018: CrackTexture_9
+    21300020: CrackTexture_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -53,103 +54,113 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: BreakTexture_0
+    - name: CrackTexture_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 350
-        width: 153
-        height: 153
+        x: 49
+        y: 567
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BreakTexture_1
+    - name: CrackTexture_1
       rect:
         serializedVersion: 2
-        x: 239
-        y: 345
-        width: 153
-        height: 153
+        x: 272
+        y: 558
+        width: 130
+        height: 130
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BreakTexture_2
+    - name: CrackTexture_2
       rect:
         serializedVersion: 2
-        x: 498
-        y: 352
-        width: 153
-        height: 153
+        x: 49
+        y: 405
+        width: 130
+        height: 130
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BreakTexture_3
+    - name: CrackTexture_3
       rect:
         serializedVersion: 2
-        x: 9
-        y: 182
-        width: 153
-        height: 153
+        x: 276
+        y: 407
+        width: 130
+        height: 130
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BreakTexture_4
+    - name: CrackTexture_4
       rect:
         serializedVersion: 2
-        x: 181
-        y: 181
-        width: 153
-        height: 153
+        x: 523
+        y: 397
+        width: 130
+        height: 130
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BreakTexture_5
+    - name: CrackTexture_5
       rect:
         serializedVersion: 2
-        x: 348
-        y: 179
-        width: 153
-        height: 153
+        x: 53
+        y: 231
+        width: 130
+        height: 130
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BreakTexture_6
+    - name: CrackTexture_6
       rect:
         serializedVersion: 2
-        x: 7
-        y: 15
-        width: 153
-        height: 153
+        x: 281
+        y: 236
+        width: 130
+        height: 130
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BreakTexture_7
+    - name: CrackTexture_7
       rect:
         serializedVersion: 2
-        x: 171
-        y: 8
-        width: 153
-        height: 153
+        x: 516
+        y: 227
+        width: 130
+        height: 130
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BreakTexture_8
+    - name: CrackTexture_8
       rect:
         serializedVersion: 2
-        x: 346
-        y: 4
-        width: 153
-        height: 153
+        x: 51
+        y: 55
+        width: 130
+        height: 130
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BreakTexture_9
+    - name: CrackTexture_9
       rect:
         serializedVersion: 2
-        x: 511
-        y: 5
-        width: 153
-        height: 151
+        x: 282
+        y: 54
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CrackTexture_10
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 53
+        width: 130
+        height: 130
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

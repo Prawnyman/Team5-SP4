@@ -22,9 +22,11 @@ public class BombLevel : MonoBehaviour {
 		if (checkPlayer != null) {
 			// Winning 
 			//Timer Check
+			//Application.LoadLevel("RubbleClear");
 		} else {
 			//lose
 			Debug.Log("Lose!!!!");
+		
 		}
 
 	}

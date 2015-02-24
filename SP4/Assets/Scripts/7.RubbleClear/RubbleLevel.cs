@@ -2,11 +2,24 @@
 using System.Collections;
 
 public class RubbleLevel : MonoBehaviour {
-
+	public GameObject Rock;
 	// Use this for initialization
 	void Start () {
-//		GameObject obj = Instantiate() as GameObject;
-//		obj.transform.position.Set(0, 0, 0);
+		int z = 0;
+		for (int i =0; i<5; i++)
+		{
+			float x = Random.Range (-8, 0);
+			float y =Random.Range (-3, 3);
+			
+			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
+
+			 x = Random.Range (0, 8);
+			 y =Random.Range (-3, 3);
+			
+			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
+			z++;
+
+		}
 	
 	}
 	
