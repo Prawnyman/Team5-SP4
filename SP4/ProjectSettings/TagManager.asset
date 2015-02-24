@@ -3,13 +3,12 @@
 --- !u!78 &1
 TagManager:
   tags:
-  - Ground
-  - Plane
+  - WW2 Endpoint
   - Character
   - WW2 Guard
-  - MoneyClone
-  - WW2 Endpoint
   - WW2 Guard_vision
+  - Plane
+  - Ground
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
