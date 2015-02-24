@@ -7,6 +7,9 @@ TagManager:
   - Plane
   - Character
   - WW2 Guard
+  - MoneyClone
+  - WW2 Endpoint
+  - Government
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -41,6 +44,10 @@ TagManager:
   User Layer 30: 
   User Layer 31: 
   m_SortingLayers:
+  - name: New Layer 1
+    userID: 1
+    uniqueID: 2093589871
+    locked: 0
   - name: Default
     userID: 0
     uniqueID: 0
