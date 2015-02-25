@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11459526}
   - 114: {fileID: 11459528}
   m_Layer: 0
-  m_Name: PC_Temp
+  m_Name: PC_TEMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
