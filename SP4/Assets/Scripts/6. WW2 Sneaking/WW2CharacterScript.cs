@@ -71,6 +71,7 @@ public class WW2CharacterScript : MonoBehaviour {
 		else if(col.gameObject.tag == "WW2 Guard" || col.gameObject.tag == "WW2 Guard_vision"){
 			caughtByGuards = true;
 			animator.SetBool("isMoving", false);
+			animator.SetBool("isShot", true);
 		}
 	}
 
