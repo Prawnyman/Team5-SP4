@@ -5,11 +5,12 @@ public class Spawn : MonoBehaviour
 {
 
 	public GameObject Obstacles;
-	int Score = 0;
+	public GameObject Ground;
+	//int Score = 0;
 	// Use this for initialization
 	void Start () 
 	{
-		InvokeRepeating ("CreateObstacles", 8.0f, 6.0f);
+		InvokeRepeating ("CreateObstacles", 6.0f, 6.0f);
 	}
 
 	void OnGui()
@@ -21,8 +22,9 @@ public class Spawn : MonoBehaviour
 	void CreateObstacles()
 	{
 		Instantiate (Obstacles);
-		Score++;
-		Debug.Log (Score);
+		Instantiate (Ground);
+		//Score++;
+		//Debug.Log (Score);
 	}
 	void Update ()
 	{
