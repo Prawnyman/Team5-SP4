@@ -6,7 +6,7 @@ public class BombLevel : MonoBehaviour {
 	public GameObject Player;
 
 	// Use this for initialization
-	void Start () {
+	void Start () { 
 		GameObject obj = Instantiate(Player) as GameObject;
 		obj.transform.position.Set(0, -4.2f, 0);
 		obj.tag = "Player";
