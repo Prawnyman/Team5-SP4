@@ -37,6 +37,6 @@ public class TouchControl : MonoBehaviour {
 					this.GetComponent<ParticleEmitter>().emit = false;
 				}
 			}
-		}			
+		}	
 	}
 }

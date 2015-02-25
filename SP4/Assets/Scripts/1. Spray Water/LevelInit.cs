@@ -26,6 +26,6 @@ public class LevelInit : MonoBehaviour {
 	
 	void Lose (){}
 	void Win(){
-		
+		Application.LoadLevel("Flight 006");
 	}
 }
