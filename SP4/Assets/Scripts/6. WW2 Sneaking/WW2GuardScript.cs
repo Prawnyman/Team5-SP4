@@ -16,6 +16,8 @@ public class WW2GuardScript : MonoBehaviour {
 		float magnitude = speed * Time.deltaTime;
 		GameObject theCharacter = GameObject.FindGameObjectWithTag("Character");
 
+		if(!theCharacter.GetComponent<WW2CharacterScript>().getCaughtByGuards() &&
+		   !theCharacter.GetComponent<WW2CharacterScript>().getReachedEndpoint())
 		if((this.transform.position - new Vector3(oldPos.x, oldPos.y)).magnitude >= 8.0f){
 			oldPos = this.transform.position;
 			this.transform.Rotate(0, 0, 180);
