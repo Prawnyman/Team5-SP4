@@ -12,6 +12,35 @@ public class TouchControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	
+		if(this.GetComponent<ParticleEmitter>().emit == true && audio.isPlaying == false)
+		{
+			audio.Play ();
+		}
+		else if(this.GetComponent<ParticleEmitter>().emit == false)
+		{
+			audio.Stop();
+		}
+		
+		#if UNITY_EDITOR
+		if(Input.GetKey("up"))
+		{	
+			transform.Rotate(new Vector3(0, 0, 1), 100 * Time.deltaTime); 
+		}
+		else if(Input.GetKey("down"))
+		{
+			transform.Rotate(new Vector3(0, 0, 1), -100 * Time.deltaTime);
+		}
+		if(Input.GetKey("space")) 
+		{
+			this.GetComponent<ParticleEmitter>().emit = true;
+		}
+		else{
+			this.GetComponent<ParticleEmitter>().emit = false;
+		}
+		#endif
+		
+		#if UNITY_ANDROID
 		if(Input.touches.Length > 0)
 		{
 			if(Input.touchCount == 1)
@@ -35,8 +64,10 @@ public class TouchControl : MonoBehaviour {
 				if(touch.phase == TouchPhase.Ended)
 				{
 					this.GetComponent<ParticleEmitter>().emit = false;
+					audio.Stop();
 				}
 			}
-		}	
+		}
+		#endif	
 	}
 }

@@ -10,21 +10,34 @@ public class FireObject : MonoBehaviour {
 		hp = 10;
 	}			
 	// Update is called once per frame
+	
+	void DestroySelf()
+	{
+		Destroy(this.gameObject);
+	}
+	
 	void Update () {
 		if(hp <= 0)
 		{
 			this.transform.localScale -= new Vector3(1.0F, 1.0F, 0);
-			LevelInit.noFireObj -= 1;
+			if(audio.isPlaying == false)
+			{
+				audio.Play();
+			}
+			Invoke("DestroySelf", audio.clip.length);
 		}
-		if(this.transform.localScale.x < 0.0f && this.transform.localScale.y < 0.0f)
-		{
-			Destroy(this.gameObject);
-		}
+		
 	}
 	
 	void OnParticleCollision(GameObject other)
 	{
 		hp-=1;
+	}
+	
+	void OnDestroy()
+	{
+		audio.Stop();
+		LevelInit.noFireObj -= 1;
 	}
 	
 }

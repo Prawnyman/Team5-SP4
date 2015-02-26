@@ -47,7 +47,7 @@ public class SpawnCarScript : MonoBehaviour {
 	{
 		while(true)
 		{
-			yield return new WaitForSeconds(Random.Range(1, 2));
+			yield return new WaitForSeconds(Random.Range(0.5f, 1));
 			currentLane = GetRandomEnum<Lanes>();
 			SpawnCar(currentLane);
 		}
