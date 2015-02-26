@@ -3,42 +3,30 @@ using System.Collections;
 
 public class AeroPlane : MonoBehaviour 
 {
-	private float timer = 30;
-	//float runTime;
-
+	//private float timer = 30;
+	public float FlySpeed = 1.0f;
 	public Vector2 jumpForce = new Vector2(0, 300);
+	Vector3 velocity = Vector3.zero;
+	//public float maxSpeed = 5.0f;
+	//public Vector3 gravity;
 	// Use this for initialization
 	void Start () 
 	{
-		//PlayerPrefs.GetFloat ("runTime", runTime);
 	}
 
-//	void End ()
-//	{
-//		GUI.Box(new Rect(10,10,380,150), "END OF THE GAME! \n\n YOUR Time IS " + timer );
-//	}
-//	void OnDestroy()
-//	{
-//		var savedTime = PlayerPrefs.GetFloat ("runTime");
-//		PlayerPrefs.SetFloat ("runTime", savedTime + Time.timeSinceLevelLoad);
-//		
-//		Debug.Log (PlayerPrefs.GetFloat ("runTime"));
-//	}
-
-	void OnGUI () 
-	{	
-		if (timer > 0) 
-		{
-			GUI.color = Color.red; //Change Color
-			GUI.Box (new Rect (310, 130, 100, 20), "Timer : " + (int)timer);
-			//GUI.Box (new Rect (310, 130, 70, 20), "Timer : " + (int)Score);
-		} else 
-		{
-			Die ();
-		}
-
-		//guiText.text = "Time: " + Time.timeSinceLevelLoad.ToString ("F2") + "\nTotal Time: " + PlayerPrefs.GetFloat ("runTime");
-	}	
+//	void OnGUI () 
+//	{	
+//		if (timer > 0) 
+//		{
+//			GUI.color = Color.red; //Change Color
+//			GUI.Box (new Rect (310, 130, 100, 20), "Timer : " + (int)timer);
+//			//GUI.Box (new Rect (310, 130, 70, 20), "Timer : " + (int)Score);
+//		} else 
+//		{
+//			Die ();
+//		}
+//	
+//	}	
 	// Update is called once per frame
 	void Update () 
 	{		
@@ -51,7 +39,7 @@ public class AeroPlane : MonoBehaviour
 //				rigidbody2D.AddForce(jumpForce);
 //			}
 //		}
-		timer -= Time.deltaTime;
+		//timer -= Time.deltaTime;
 
 		if (Input.GetKeyUp ("space"))
 		{
@@ -62,18 +50,26 @@ public class AeroPlane : MonoBehaviour
 		Vector2 screenPosition = Camera.main.WorldToScreenPoint (transform.position);
 		if (screenPosition.y > Screen.height || screenPosition.y < 0)
 		{
-			Die();
+			//Die();
 		}	
 	}
 
-	void OnCollisionEnter2D(Collision2D other)
+	void FixedUpdate()
 	{
-		Die();
-	}
+		rigidbody2D.AddForce (Vector2.right * FlySpeed);
 
-	void Die()
-	{
-		Debug.Log ("Die");
-		Application.LoadLevel (Application.loadedLevel); //Restart for now
+//		velocity.x = FlySpeed;
+//		velocity += gravity;
+//		transform.position += velocity * Time.deltaTime;
 	}
+//	void OnCollisionEnter2D(Collision2D other)
+//	{
+//		Die();
+//	}
+//
+//	void Die()
+//	{
+//		Debug.Log ("Die");
+//		Application.LoadLevel (Application.loadedLevel); //Restart for now
+//	}
 }
