@@ -32,7 +32,7 @@ public class RubbleLevel : MonoBehaviour {
 		if (checkRubble != null) {
 			//losing
 		} else {
-			//Winning
+			//Winning  
 			Debug.Log("Winner!");
 		}
 	}
