@@ -30,7 +30,9 @@ public class PlayButton : MonoBehaviour
 	private void tappedHandler(object sender, EventArgs e)
 	{
 		//Application.LoadLevel(UnityEngine.Random.Range(1, Application.levelCount));
-		Application.LoadLevel(3);
+		if (Application.loadedLevel == 2)
+			GlobalVariables.Restart();
+		Application.LoadLevel(UnityEngine.Random.Range (3, Application.levelCount));
 	}
 
 	private void pressedHandler(object sender, EventArgs e)
