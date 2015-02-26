@@ -7,6 +7,8 @@ public class GantryScript : MonoBehaviour {
 	private Vector2 lp;
 	private	float yChange = 0.0f;
 	
+	public GameObject particlesPrefab;
+	
 	private enum Lanes{
 		Top,
 		Mid,
@@ -40,6 +42,7 @@ public class GantryScript : MonoBehaviour {
 		if(collider.gameObject.tag == "Car")
 		{
 			Destroy(collider.gameObject);
+			Instantiate(particlesPrefab, collider.transform.position, Quaternion.identity);
 		}
 	}
 	
