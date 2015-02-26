@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CarScript : MonoBehaviour {
 	
-	private Vector3 speed = new Vector3(6.0f, 0, 0);
+	private Vector3 speed = new Vector3(10.0f, 0, 0);
 		
 	// Use this for initialization
 	void Start () {
