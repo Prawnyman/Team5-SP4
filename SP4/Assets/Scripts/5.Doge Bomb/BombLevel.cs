@@ -5,7 +5,9 @@ public class BombLevel : MonoBehaviour {
 	public GameObject BombSpawner;
 	public GameObject Player;
 
-	bool checkLose = false;
+	public AudioClip winSound;
+	public AudioClip loseSound;
+
 	GameObject Timer;
 
 	// Use this for initialization
@@ -27,6 +29,7 @@ public class BombLevel : MonoBehaviour {
 		{
 			if (checkPlayer != null) {
 				StartCoroutine(Win());
+				//Destroy(obj2);
 			}
 		}
 
@@ -36,9 +39,7 @@ public class BombLevel : MonoBehaviour {
 			//Application.LoadLevel("RubbleClear");
 			//StartCoroutine(Win());
 		}*/
-		if (checkPlayer == null && checkLose == false) {
-			checkLose = true;
-			audio.Play ();
+		if (checkPlayer == null) {
 			StartCoroutine(Lose());
 		}
 
@@ -47,14 +48,22 @@ public class BombLevel : MonoBehaviour {
 	private IEnumerator Win()
 	{
 		GlobalVariables.levelPassed = true;
-		yield return new WaitForSeconds (0.8f);
+		if (!audio.isPlaying) {
+			audio.clip = winSound;
+			audio.Play();
+		}
+		yield return new WaitForSeconds (2.4f);
 		Application.LoadLevel ("0B. Level Transition");
 	}
 	
 	private IEnumerator Lose()
 	{
 		GlobalVariables.levelPassed = false;
-		yield return new WaitForSeconds (1.2f);
+		if (!audio.isPlaying) {
+			audio.clip = loseSound;
+			audio.Play();
+		}
+		yield return new WaitForSeconds (0.8f);
 		Application.LoadLevel ("0B. Level Transition");
 	}
 }

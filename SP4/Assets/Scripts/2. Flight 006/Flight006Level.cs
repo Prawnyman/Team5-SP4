@@ -4,6 +4,9 @@ using System.Collections;
 public class Flight006Level : MonoBehaviour {
 	public GameObject plane;
 	public GameObject explosion;
+	
+	public AudioClip winSound;
+	public AudioClip loseSound;
 
 	// Use this for initialization
 	void Start () {
@@ -42,13 +45,21 @@ public class Flight006Level : MonoBehaviour {
 	private IEnumerator Win()
 	{
 		GlobalVariables.levelPassed = true;
-		yield return new WaitForSeconds (0.8f);
+		if (!audio.isPlaying) {
+			audio.clip = winSound;
+			audio.Play();
+		}
+		yield return new WaitForSeconds (2.4f);
 		Application.LoadLevel ("0B. Level Transition");
 	}
-
+	
 	private IEnumerator Lose()
 	{
 		GlobalVariables.levelPassed = false;
+		if (!audio.isPlaying) {
+			audio.clip = loseSound;
+			audio.Play();
+		}
 		yield return new WaitForSeconds (1.2f);
 		Application.LoadLevel ("0B. Level Transition");
 	}

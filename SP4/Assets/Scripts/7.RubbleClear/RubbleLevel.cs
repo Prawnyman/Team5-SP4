@@ -5,8 +5,11 @@ public class RubbleLevel : MonoBehaviour {
 	public GameObject Rock;
 	public GameObject Picture;
 
+	public AudioClip winSound;
+	public AudioClip loseSound;
+
 	GameObject Timer;
-	bool checkLose = false;
+	//bool checkLose = false;
 	// Use this for initialization
 	void Start () {
 		//audio.Play();
@@ -34,9 +37,8 @@ public class RubbleLevel : MonoBehaviour {
 		GameObject checkRubble = GameObject.FindGameObjectWithTag ("Rock");
 
 		if (Timer.GetComponent<TimerScript>().timeLeft <= 0) {
-			if (checkRubble != null && checkLose == false) {
-				checkLose = true;
-				audio.Play();
+			if (checkRubble != null) {// && checkLose == false) {
+				//checkLose = true;
 				StartCoroutine(Lose ());
 			}
 		}
@@ -49,13 +51,21 @@ public class RubbleLevel : MonoBehaviour {
 	private IEnumerator Win()
 	{
 		GlobalVariables.levelPassed = true;
-		yield return new WaitForSeconds (0.8f);
+		if (!audio.isPlaying) {
+			audio.clip = winSound;
+			audio.Play();
+		}
+		yield return new WaitForSeconds (2.4f);
 		Application.LoadLevel ("0B. Level Transition");
 	}
 
 	private IEnumerator Lose()
 	{
 		GlobalVariables.levelPassed = false;
+		if (!audio.isPlaying) {
+			audio.clip = loseSound;
+			audio.Play();
+		}
 		yield return new WaitForSeconds (0.8f);
 		Application.LoadLevel ("0B. Level Transition");
 	}
