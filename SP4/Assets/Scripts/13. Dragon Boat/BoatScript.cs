@@ -11,7 +11,6 @@ public class BoatScript : MonoBehaviour {
 	private float timeLastRowed = -1.0f;
 	
 	private float yChange = 0.0f;
-	
 	private enum row
 	{
 		Left,
@@ -66,7 +65,7 @@ public class BoatScript : MonoBehaviour {
 				{
 					if(yChange < 0 && fp.x < Screen.width / 2 && lp.x < Screen.width / 2)
 					{
-						if(currentTime - timeLastRowed > 0.25f){
+						if(currentTime - timeLastRowed > 0.15f){
 							speed.x = maxSpeed;
 						}
 						else{
@@ -81,7 +80,7 @@ public class BoatScript : MonoBehaviour {
 				{
 					if(yChange < 0 && fp.x > Screen.width / 2 && lp.x > Screen.width / 2)
 					{
-						if(currentTime - timeLastRowed > 0.25f){
+						if(currentTime - timeLastRowed > 0.15f){
 							speed.x = maxSpeed;
 						}
 						else{
@@ -101,7 +100,7 @@ public class BoatScript : MonoBehaviour {
 		{
 			if(currentRow == row.Left)
 			{
-				if(currentTime - timeLastRowed > 0.25f){
+				if(currentTime - timeLastRowed > 0.15f){
 					speed.x = maxSpeed;
 				}
 				else{
@@ -116,7 +115,7 @@ public class BoatScript : MonoBehaviour {
 		{
 			if(currentRow == row.Right && currentTime - timeLastRowed > 0.5f)
 			{
-				if(currentTime - timeLastRowed > 0.25f){
+				if(currentTime - timeLastRowed > 0.15f){
 					speed.x = maxSpeed;
 				}
 				else{
