@@ -8,7 +8,7 @@ public class BombBeheavior : MonoBehaviour {
 		Debug.Log("collision name = " + col.gameObject.name);
 		if (col.gameObject.name == "Wall")
 		{
-				Destroy(gameObject);
+			Destroy(gameObject);
 			GameObject obj = Instantiate(Boom, gameObject.transform.position, Quaternion.identity) as GameObject;
 		}
 	}
