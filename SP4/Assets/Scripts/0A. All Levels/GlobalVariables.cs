@@ -8,10 +8,9 @@ public class GlobalVariables : MonoBehaviour {
 	static public int score = 0;
 	static public int lastLevel = 0;
 	static public int levelsPlayed = 1;
+
 	// Use this for initialization
 	void Start () {
-		//lives = 5;
-		//score = 0;
 	}
 	
 	// Update is called once per frame
