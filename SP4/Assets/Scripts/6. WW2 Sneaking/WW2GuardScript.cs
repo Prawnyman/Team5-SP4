@@ -38,6 +38,7 @@ public class WW2GuardScript : MonoBehaviour {
 			else if (newDir.x > 0)
 				this.transform.rotation = Quaternion.Euler(0, 0, -Vector2.Angle(new Vector2(0, 1), newDir));
 
+			GetComponentInChildren<AudioSource>().Play();
 			animator.SetBool("isFiringWeapon", true);
 		}
 	}

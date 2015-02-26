@@ -46,11 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\5.Doge Bomb\NewBehaviourScript.js" />
+     <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\TapJS_Breaker.js" />
+     <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\TapJS_Spawner.js" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Sounds\Flight 006\delete this.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="TouchScript">
+ <HintPath>C:/Users/Shawn/Desktop/DM2295 Game Development Project/Team5-SP4/SP4/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
