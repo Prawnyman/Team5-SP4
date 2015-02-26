@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rock: {fileID: 121174, guid: e0e8a4ccc0556e440a4c43e9b9141d31, type: 2}
   Picture: {fileID: 146656, guid: c3f974cf09d6fdd418316c414b32328f, type: 2}
+  Picture2: {fileID: 143348, guid: 2665b76d383d34643a40730afc7c323c, type: 2}
 --- !u!4 &126359703
 Transform:
   m_ObjectHideFlags: 0
