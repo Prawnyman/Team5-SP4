@@ -9,7 +9,8 @@ TagManager:
   - WW2 Guard_vision
   - Plane
   - Ground
-  - Car
+  - Rock
+  - Bomb
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

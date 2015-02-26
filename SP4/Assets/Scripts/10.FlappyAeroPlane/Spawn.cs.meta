@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 279bac23651d9a24ebbb5757bb294444
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Obstacles: {fileID: 186728, guid: ccc1b68edddab204c81fb5bdb0ca1213, type: 2}
+  - Ground: {fileID: 123714, guid: e650184bd910acf4c835ada55db207a9, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

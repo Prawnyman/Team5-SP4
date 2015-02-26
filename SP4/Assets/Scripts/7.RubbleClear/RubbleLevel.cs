@@ -3,9 +3,11 @@ using System.Collections;
 
 public class RubbleLevel : MonoBehaviour {
 	public GameObject Rock;
+	public GameObject Picture;
 	// Use this for initialization
 	void Start () {
 		int z = 0;
+		Instantiate (Picture);
 		for (int i =0; i<5; i++)
 		{
 			float x = Random.Range (-8, 0);
@@ -25,6 +27,13 @@ public class RubbleLevel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		GameObject checkRubble = GameObject.FindGameObjectWithTag ("Rock");
+		
+		if (checkRubble != null) {
+			//losing
+		} else {
+			//Winning  
+			Debug.Log("Winner!");
+		}
 	}
 }

@@ -6,9 +6,12 @@ public class WW2GuardScript : MonoBehaviour {
 	private float speed = 5.0f;
 	private Vector2 oldPos;
 
+	private Animator animator;
+
 	// Use this for initialization
 	void Start () {
 		oldPos = this.transform.position;
+		animator = GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -22,8 +25,21 @@ public class WW2GuardScript : MonoBehaviour {
 			dir = -dir;
 		}
 
-		//Move forward towards where its facing
-		this.transform.Translate(new Vector2(0, 1) * magnitude);
+		if(!theCharacter.GetComponent<WW2CharacterScript>().getCaughtByGuards() &&
+		   !theCharacter.GetComponent<WW2CharacterScript>().getReachedEndpoint()){
+			//Move forward towards where its facing
+			this.transform.Translate(dir * magnitude, Space.World);
+		}
+		else if(theCharacter.GetComponent<WW2CharacterScript>().getCaughtByGuards() && !animator.GetBool("isFiringWeapon")){
+			Vector2 newDir = (theCharacter.transform.position - transform.position).normalized;
+
+			if(newDir.x < 0)
+				this.transform.rotation = Quaternion.Euler(0, 0, Vector2.Angle(new Vector2(0, 1), newDir));
+			else if (newDir.x > 0)
+				this.transform.rotation = Quaternion.Euler(0, 0, -Vector2.Angle(new Vector2(0, 1), newDir));
+
+			animator.SetBool("isFiringWeapon", true);
+		}
 	}
 
 	public void setDir(float x, float y){
