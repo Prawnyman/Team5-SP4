@@ -8,7 +8,7 @@ public class Collision : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D col)
 	{
 		//player = GameObject.FindGameObjectWithTag("Player");
-		Debug.Log("collision name = " + col.gameObject.name);
+		//Debug.Log("collision name = " + col.gameObject.name);
 		if ((col.gameObject.name == "BombTemp(Clone)")||(col.gameObject.name == "BombTemp"))
 		{
 			Destroy(col.gameObject);

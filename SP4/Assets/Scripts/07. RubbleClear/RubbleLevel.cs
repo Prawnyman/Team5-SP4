@@ -11,6 +11,8 @@ public class RubbleLevel : MonoBehaviour {
 
 	GameObject Timer;
 
+	private bool gameEnd = true;
+
 	// Use this for initialization
 	void Start () {
 		GlobalVariables.lastLevel = Application.loadedLevel;
@@ -23,8 +25,7 @@ public class RubbleLevel : MonoBehaviour {
 		} else {
 			Instantiate (Picture2);
 		}
-
-
+		
 		for (int i =0; i<1; i++)
 		{
 			float x = Random.Range (-7, 0);
@@ -46,10 +47,7 @@ public class RubbleLevel : MonoBehaviour {
 			y =Random.Range (0, 4);
 			Instantiate (Rock, new Vector3 (x, y, z), Quaternion.identity);
 			z++;
-
-
 		}
-
 	}
 	
 	// Update is called once per frame
@@ -58,13 +56,15 @@ public class RubbleLevel : MonoBehaviour {
 
 		if (Timer.GetComponent<TimerScript>().timeLeft <= 0)
 		{
-			if (checkRubble != null) {
+			if (checkRubble != null && gameEnd) {
+				gameEnd = false;
 				StartCoroutine (Lose());
 			}
 		}
 		else
 		{
-			if (checkRubble == null) {
+			if (checkRubble == null && gameEnd) {
+				gameEnd = false;
 				StartCoroutine (Win());
 			}
 		}

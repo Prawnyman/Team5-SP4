@@ -30,7 +30,6 @@ public class BombScript : MonoBehaviour
 			spawnDelay = spawnDelay - 20;
 			if (spawnDelay < 100)
 				spawnDelay = 100;
-			Debug.Log(spawnDelay);
 			DiffupPrev = now;
 		}
 
@@ -41,7 +40,7 @@ public class BombScript : MonoBehaviour
 
 		for (int i=0; i<spawnCount; i++) {
 			float x = Random.Range (-12, 12);
-			float y = Random.Range (7, 9);
+			float y = Random.Range (13, 15);
 
 			Instantiate (spawnType, new Vector3 (x, y, 0), Quaternion.identity);
 		}
