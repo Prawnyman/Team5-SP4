@@ -30,7 +30,7 @@ public class BombScript : MonoBehaviour
 			spawnDelay = spawnDelay - 20;
 			if (spawnDelay < 100)
 				spawnDelay = 100;
-			Debug.Log(spawnDelay);
+			//Debug.Log(spawnDelay);
 			DiffupPrev = now;
 		}
 
