@@ -22,17 +22,11 @@ public class LivesManager : MonoBehaviour {
 				HeartObject.renderer.material.color = Color.black;
 
 		}
-
-		//hearts = GameObject.FindGameObjectsWithTag ("heart");
-		/*
-		for (int i = 4; i >= GlobalVariables.lives; i++)
-		{
-			Color col = Color.black;
-			hearts[i].renderer.material.color = col;
-		}
-*/
-		if (GlobalVariables.levelPassed == false)
+		
+		if (GlobalVariables.levelPassed == false) {
 			GlobalVariables.lives--;
+			Debug.Log("Lose " + GlobalVariables.lastLevel);
+		}
 	}
 
 	void Update () {

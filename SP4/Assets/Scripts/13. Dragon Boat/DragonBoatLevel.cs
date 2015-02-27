@@ -20,12 +20,18 @@ public class DragonBoatLevel : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Timer.GetComponent<TimerScript>().timeLeft <= 0) {
-			if (Boat.transform.position.x < 20)
+			if (Boat.transform.position.x < 20 && gameEnd)
+			{
+				gameEnd = false;
 				StartCoroutine(Lose ());
+			}
 		}
 		else {
 			if (Boat.transform.position.x >= 20)
+			{
+				gameEnd = false;
 				StartCoroutine(Win ());
+			}
 		}
 	}
 
