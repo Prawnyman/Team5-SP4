@@ -1152,6 +1152,68 @@ PolygonCollider2D:
       - {x: .287685394, y: -.426527739}
       - {x: .208198547, y: -.218263865}
       - {x: .379999995, y: -.0399999991}
+--- !u!1001 &897212582
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 442550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 442550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .0299999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 442550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 442550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 442550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 142550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_Name
+      value: Instructions
+      objectReference: {fileID: 0}
+    - target: {fileID: 13242550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_Text
+      value: 'Tap to keep the plane aloft
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 13242550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 13242550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+      propertyPath: m_Anchor
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+  m_RootGameObject: {fileID: 1975516551}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &908591808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +2427,73 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_Size: {x: 6.72836685, y: 34}
   m_Center: {x: .418604016, y: 0}
+--- !u!1 &1975516551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 142550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+  m_PrefabInternal: {fileID: 897212582}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1975516554}
+  - 132: {fileID: 1975516553}
+  - 114: {fileID: 1975516552}
+  m_Layer: 0
+  m_Name: Instructions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1975516552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11442550, guid: 3c384d366746bc24dabc7d8dec25bb11,
+    type: 2}
+  m_PrefabInternal: {fileID: 897212582}
+  m_GameObject: {fileID: 1975516551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6eff4d1fe0b59408bdb638a4e0ac51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!132 &1975516553
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13242550, guid: 3c384d366746bc24dabc7d8dec25bb11,
+    type: 2}
+  m_PrefabInternal: {fileID: 897212582}
+  m_GameObject: {fileID: 1975516551}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 'Tap to keep the plane aloft
+
+'
+  m_Anchor: 4
+  m_Alignment: 0
+  m_PixelOffset: {x: .5, y: .5}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 12800000, guid: 20e6c83da122d6f478aaefc6db09f169, type: 3}
+  m_Material: {fileID: 0}
+  m_FontSize: 50
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
+--- !u!4 &1975516554
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 442550, guid: 3c384d366746bc24dabc7d8dec25bb11, type: 2}
+  m_PrefabInternal: {fileID: 897212582}
+  m_GameObject: {fileID: 1975516551}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .5, y: .0299999993, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1 &1997380353
 GameObject:
   m_ObjectHideFlags: 0
