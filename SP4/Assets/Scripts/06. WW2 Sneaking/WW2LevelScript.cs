@@ -10,6 +10,8 @@ public class WW2LevelScript : MonoBehaviour {
 	public AudioClip winSound;
 	public AudioClip loseSound;
 
+	private bool gameEnd = true;
+
 	// Use this for initialization
 	void Start () {
 		GlobalVariables.lastLevel = Application.loadedLevel;
@@ -34,10 +36,12 @@ public class WW2LevelScript : MonoBehaviour {
 	void Update () {
 
 		//Checks if player has reached endpoint
-		if(theCharacter.GetComponent<WW2CharacterScript>().getReachedEndpoint()){
+		if(theCharacter.GetComponent<WW2CharacterScript>().getReachedEndpoint() && gameEnd){
+			gameEnd = false;
 			StartCoroutine(Win());
 		}
-		else if(theCharacter.GetComponent<WW2CharacterScript>().getCaughtByGuards()){
+		else if(theCharacter.GetComponent<WW2CharacterScript>().getCaughtByGuards() && gameEnd){
+			gameEnd = false;
 			StartCoroutine(Lose());
 		}
 	}

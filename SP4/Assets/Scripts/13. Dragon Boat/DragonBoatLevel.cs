@@ -8,6 +8,8 @@ public class DragonBoatLevel : MonoBehaviour {
 	GameObject Timer;
 	GameObject Boat;
 
+	private bool gameEnd = true;
+
 	// Use this for initialization
 	void Start () {
 		GlobalVariables.lastLevel = Application.loadedLevel;
