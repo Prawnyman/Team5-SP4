@@ -282,6 +282,7 @@ GameObject:
   - 4: {fileID: 1085368247}
   - 212: {fileID: 1085368246}
   - 95: {fileID: 1085368245}
+  - 114: {fileID: 1085368248}
   m_Layer: 0
   m_Name: boat
   m_TagString: Untagged
@@ -333,11 +334,62 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1085368244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.44999981, y: -.519999981, z: 0}
+  m_LocalScale: {x: .39784193, y: .397841901, z: .397841901}
+  m_Children: []
+  m_Father: {fileID: 1350171137}
+  m_RootOrder: 0
+--- !u!114 &1085368248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1085368244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c0b6bc1ffdcf34abc0cb90921e7902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1350171136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1350171137}
+  - 114: {fileID: 1350171138}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1350171137
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1350171136}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1085368247}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
+--- !u!114 &1350171138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1350171136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c0b6bc1ffdcf34abc0cb90921e7902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1440939706
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +421,7 @@ Transform:
   - {fileID: 1713675928}
   - {fileID: 847992334}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1490824488
 GameObject:
   m_ObjectHideFlags: 0
