@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11404332}
   - 50: {fileID: 5064878}
   - 61: {fileID: 6164878}
+  - 82: {fileID: 8207406}
   m_Layer: 0
   m_Name: Crack
   m_TagString: Rock
@@ -57,6 +58,64 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 1.29999995, y: 1.29999995}
   m_Center: {x: 0, y: 0}
+--- !u!82 &8207406
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121174}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 94253d82cfcbd3a47a2f208ee99a396c, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: .709999979
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11404332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Particle: {fileID: 172684, guid: d5531063a7eb49d43b900beea6428328, type: 2}
+  Particle2: {fileID: 194024, guid: e7d2bdc25710fe14a929ae8d8df56597, type: 2}
   ClickNumber: 0
   Default: {fileID: 21300000, guid: dcb9df7f48ca592439319f9bbb3d2c23, type: 3}
   sprite1: {fileID: 21300002, guid: dcb9df7f48ca592439319f9bbb3d2c23, type: 3}

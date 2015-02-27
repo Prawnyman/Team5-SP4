@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Crack : MonoBehaviour {
 	public GameObject Particle;
+	public GameObject Particle2;
 	public int ClickNumber; 
 	public Sprite Default;
 	public Sprite sprite1; 
@@ -36,6 +37,7 @@ void OnMouseDown()
 void ChangeSprite()
 {
 		clickcount++;
+		audio.Play();
 		if (clickcount >= ClickNumber) {
 
 			if (spriteRenderer.sprite == Default) {
@@ -71,6 +73,8 @@ void ChangeSprite()
 			} else
 			if (spriteRenderer.sprite == sprite10) {
 				Destroy (gameObject);
+				GameObject obj2 = Instantiate(Particle2,gameObject.transform.position, Quaternion.identity) as GameObject;
+
 			}
 			clickcount=0;
 		GameObject obj = Instantiate(Particle,gameObject.transform.position, Quaternion.identity) as GameObject;

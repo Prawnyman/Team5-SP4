@@ -52,7 +52,11 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="TouchScript">
+<<<<<<< HEAD
  <HintPath>C:/Team5-SP4/SP4/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+=======
+ <HintPath>C:/Users/Mr. Fatal/Desktop/School Work/Team5-SP4/SP4/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
+>>>>>>> origin/master
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
