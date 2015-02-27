@@ -5,6 +5,7 @@ public class ExplosionAnimationScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		audio.Play();
 	}
 	
 	// Update is called once per frame
@@ -13,7 +14,7 @@ public class ExplosionAnimationScript : MonoBehaviour {
 	}
 
 	private IEnumerator destroyExplosion(){
-		yield return new WaitForSeconds (0.8f);
+		yield return new WaitForSeconds (1.12f);
 		DestroyObject(gameObject);
 	}
 }
