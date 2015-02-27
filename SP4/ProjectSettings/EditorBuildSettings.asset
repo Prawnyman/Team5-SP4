@@ -24,4 +24,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/08. ERP Game.unity
   - enabled: 1
+    path: Assets/Scenes/10. FlappyAeroPlane.unity
+  - enabled: 1
     path: Assets/Scenes/13. DragonBoat.unity
