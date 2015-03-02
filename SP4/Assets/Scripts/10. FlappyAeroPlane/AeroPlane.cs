@@ -10,6 +10,8 @@ public class AeroPlane : MonoBehaviour
 
 	public AudioClip winSound;
 	public AudioClip loseSound;
+	public AudioClip takeoff;
+	public AudioClip jump;
 	
 	GameObject Timer;
 	
@@ -20,6 +22,7 @@ public class AeroPlane : MonoBehaviour
 	{
 		GlobalVariables.lastLevel = Application.loadedLevel;
 		Timer = GameObject.FindGameObjectWithTag("timer");
+		TakeOff ();
 	}
 
 	// Update is called once per frame
@@ -29,6 +32,8 @@ public class AeroPlane : MonoBehaviour
 		{
 			if (Input.GetKeyUp ("space") || Input.touchCount > 0)
 			{
+				audio.clip = jump;
+				audio.Play();
 				rigidbody2D.velocity = Vector2.zero;
 				rigidbody2D.AddForce (jumpForce);
 			}
@@ -64,6 +69,26 @@ public class AeroPlane : MonoBehaviour
 		}
 	}
 
+	private IEnumerator TakeOff()
+	{
+		if (!audio.isPlaying) 
+		{
+			audio.clip = winSound;
+			audio.Play ();
+		}
+		yield return new WaitForSeconds (2.4f);
+	}
+
+	private IEnumerator Jump()
+	{
+		if (!audio.isPlaying) 
+		{
+			audio.clip = winSound;
+			audio.Play ();
+		}
+		yield return new WaitForSeconds (1.0f);
+	}
+
 	private IEnumerator Win()
 	{
 		GlobalVariables.levelPassed = true;
@@ -74,7 +99,7 @@ public class AeroPlane : MonoBehaviour
 		yield return new WaitForSeconds (2.4f);
 		Application.LoadLevel ("0B. Level Transition");
 	}
-	
+
 	private IEnumerator Lose()
 	{
 		GlobalVariables.levelPassed = false;

@@ -2,7 +2,11 @@ fileFormatVersion: 2
 guid: a20c68e236401fc47bb6bd991383e8ad
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - winSound: {fileID: 8300000, guid: c182f3238f11569498f9a334d54347e2, type: 3}
+  - loseSound: {fileID: 8300000, guid: a7a95fb6cce00544ebe53600aaf952a5, type: 3}
+  - takeoff: {fileID: 8300000, guid: 902697bb9f3ae8246b8169e2d0c20d1f, type: 3}
+  - jump: {fileID: 8300000, guid: a079adeddae657543af3e996191ab6fa, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
